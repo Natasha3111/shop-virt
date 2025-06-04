@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loja Virtual Futurística</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: rgba(30, 30, 60, 0.9);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #00fff7;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 0.1em;
+    }
+
+    header .logo {
+      font-size: 1.8rem;
+      color: #00fff7;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    nav a {
+      color: #00fff7;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #7efff9;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(90deg, #00fff7aa, #007b8a88);
+      border-radius: 1rem;
+      padding: 3rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      box-shadow: 0 0 20px #00fff7aa;
+    }
+
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      color: #00fff7;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccf9ff;
+      margin-bottom: 2rem;
+    }
+
+    .hero button {
+      background: #00fff7;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      color: #002222;
+      cursor: pointer;
+      font-size: 1.1rem;
+      box-shadow: 0 0 15px #00fff7aa;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero button:hover {
+      background: #7efff9;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background: rgba(20, 20, 40, 0.8);
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 0 10px #00fff7aa;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px #00fff7;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+    }
+
+    .product-card h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00fff7;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .product-card p {
+      font-size: 1rem;
+      color: #b0e6e9;
+      margin-bottom: 1rem;
+    }
+
+    .product-card button {
+      background: #00fff7;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      color: #002222;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00fff7aa;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-card button:hover {
+      background: #7efff9;
+    }
+
+    footer {
+      background: rgba(30, 30, 60, 0.9);
+      color: #00fff7aa;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      border-top: 2px solid #00fff7;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">NEXSHOP</div>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Produtos</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+      <a href="#">Carrinho</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Loja Futurística</h1>
+      <p>Explore o futuro das compras online. Produtos modernos, tecnologia e inovação ao seu alcance.</p>
+      <button>Comprar Agora</button>
+    </section>
+
+    <section class="products">
+      <article class="product-card">
+        <img src="https://images.unsplash.com/photo-1512499617640-c2f999930c83?auto=format&fit=crop&w=400&q=80" alt="Produto 1" />
+        <h3>Headphone Cyber X</h3>
+        <p>Som imersivo e design futurístico para gamers e amantes da música.</p>
+        <button>Adicionar ao Carrinho</button>
+      </article>
+
+      <article class="product-card">
+        <img src="https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?auto=format&fit=crop&w=400&q=80" alt="Produto 2" />
+        <h3>Smartwatch Neon</h3>
+        <p>Monitoramento avançado com interface holográfica.</p>
+        <button>Adicionar ao Carrinho</button>
+      </article>
+
+      <article class="product-card">
+        <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=400&q=80" alt="Produto 3" />
+        <h3>Óculos VR 3000</h3>
+        <p>Realidade virtual com gráficos ultra-realistas.</p>
+        <button>Adicionar ao Carrinho</button>
+      </article>
+
+      <article class="product-card">
+        <img src="https://images.unsplash.com/photo-1549388604-817d15aa0110?auto=format&fit=crop&w=400&q=80" alt="Produto 4" />
+        <h3>Drone Falcon X</h3>
+        <p>Controle preciso e câmeras em alta definição para aventuras.</p>
+        <button>Adicionar ao Carrinho</button>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 NEXSHOP - Todos os direitos reservados
+  </footer>
+
+</body>
+</html>
